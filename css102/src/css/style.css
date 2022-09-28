@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    text-transform: lowercase;
+    text-decoration: none;
+    line-height: 100%;
+    text-align: justify;
+    text-indent: 45px;
+}
+h2{
+    text-shadow: 5px 4px 3px rgb(236, 89, 89);
+}
+.header{
+    -webkit-text-stroke: 2px red;
+    color: aliceblue;
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+.box{
+    width: 250px;
+    height: 250px;
+    background: rgb(14,87,255);
+    background: linear-gradient(63deg, rgba(14,87,255,0.5) 0%, rgba(255,34,242,0.5) 93%); 
+    box-shadow: 28px 40px 0px -8px rgba(0,0,0,0.68);
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.box_text{
+    margin-top: 120px;
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg");
+}
+.box_text p{
+    color: white;
+}
