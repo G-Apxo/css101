@@ -3,9 +3,166 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.image_container{
+    width: 80px;
+    height: 30px;
+}
 .container{
     width: 1280px;
+    margin: 0 auto;
 }
 .row{
     display: flex;
+}
+.col-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+}
+.col-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+}
+.col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+}
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+.col-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+}
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.col-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+}
+.col-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+}
+.col-9 {
+    flex: 0 0 auto;
+    width: 75%;
+}
+.col-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+}
+.col-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+}
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+.nav_wrapper{
+    display: flex;
+    list-style: none;
+}
+.nav_link{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2F2E41;
+    margin-left: 36px;
+}
+.justiy-content-center{
+    justify-content: center;
+}
+.justiy-space-between{
+    justify-content: space-between;
+}
+.aling-items-center{
+    align-items: center;
+}
+.btn_login{
+    width: 102px;
+    height: 51px;
+    border: 1px solid #6C63FF;
+    border-radius: 2px;
+    color: #6C63FF;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 14px;
+}
+.btn_started{
+    width: 140px;
+    height: 51px;
+    background: #6C63FF;
+    border: 1px solid #6C63FF;
+    border-radius: 2px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+.header{
+    margin-top: 40px;
+}
+.active{
+    border-bottom: 5px solid #6C63FF;
+}
+.banner_heade__text{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 86px;
+    line-height: 88px;
+    letter-spacing: -1px;
+    color: #2F2E41;
+}
+.banner_small__text{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #9893A3;
+}
+.mt-24{
+    margin-top: 24px;
+}
+.mb-24{
+    margin-bottom: 24px;
+}
+.banner{
+    margin-top: 80px;
+}
+.partners{
+    margin-top: 120px;
+}
+.detailed_info{
+    margin-top: 120px;
+}
+.box{
+    width: 90%;
+    height: 500px;
+    background-color: black;
+}
+.box_car{
+    width: 100%;
+    height: 500px;
+    background-color: red;
+}
+.car_decription{
+    background: #FFFFFF;
+    border-radius: 14px;
+    width: 80%;
+    height: 150px;
 }
