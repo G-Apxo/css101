@@ -1,0 +1,59 @@
+/* div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    animation-name: example;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-direction: reverse;
+} */
+
+@keyframes example {
+    0% {background-color: red;  left: 0px; top:0px;}
+    25% {background-color: blue; left: 200px; top: 0px;}
+    50% {background-color: green; left: 200px; top: 200px;}
+    75% {background-color: yellow; left: 0px; top: 200px; }
+    100% {background-color: red; left: 0px; top: 0px;}
+}
+
+.button{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    outline: 2px solid white;
+    padding: 30px 60px;
+    font-weight: bolder;
+    overflow: hidden;
+}
+.button:hover{
+    color: purple;
+}
+.button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: width 1s;
+    transform: skewX(35deg);
+}
+.button:hover::before{
+    width: 150%;
+}
+body{
+    background-color: black;
+}
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: green;
+    }
+}

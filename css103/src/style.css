@@ -23,6 +23,7 @@ img{
 }
 .row{
     display: flex;
+    flex-wrap: wrap;
 }
 .col-1 {
     flex: 0 0 auto;
@@ -165,4 +166,73 @@ img{
     border-radius: 14px;
     width: 80%;
     height: 150px;
+}
+.desktop_view{
+    display: block;
+}
+.header{
+    display: block;
+}
+.second_header{
+    display: none;
+}
+
+/* გამოძახების შემთხვევაში გამოიყენეთ ეს */
+@import url(tablet.css) (min-device-width:481px) and (max-device-width:768);
+
+/* ტელეფონის ზომები */
+@media(min-width:0px) and (max-width:480px){
+
+}
+/* ტელეფონის ზომები და გადმოტრიალებულის ვერსიები */
+@media(min-width:481px) and (max-width:768px){
+
+}
+
+/* პლანშეტის ზომები */
+@media(min-width:769px) and (max-width:980px){
+
+}
+
+@media only screen and (max-width:600px) {
+    
+    [class*="col-"]{
+        width: 100%;
+    }
+    .header{
+        display: none;
+    }
+    .second_header{
+        display: block;
+    }
+    .banner_heade__text{
+        font-size: 43px;
+    }
+    .container{
+        width: 350px;
+    }
+    .desktop_view{
+        display: none;
+    }
+}
+.item1 {grid-area: header;}
+.item2 {grid-area: menu;}
+.item3 {grid-area: main;}
+.item4 {grid-area: right;}
+.item5 {grid-area: footer;}
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'header header header header header'
+    'menu main main right right'
+    'menu footer footer footer footer';
+    background-color: #FFFFFF;
+    gap: 10px;
+    padding: 10px;
+}
+.grid-container > div {
+    background-color: blue;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
 }
