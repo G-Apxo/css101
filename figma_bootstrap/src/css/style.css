@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('http://fonts.cdnfonts.com/css/playfair-display');
+body{
+    background: rgba(34, 42, 54, 0.95);
+}
+img{
+    width: 100%;
+}
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(../fonts/Poppins-Regular.ttf);
+  }
+@font-face {
+font-family: PoppinsSemiBold;
+src: url(../fonts/Poppins-SemiBold.ttf);
+}
+.nav-link{
+    font-family: 'PoppinsRegular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.btn_cotnact{
+    padding: 10px 20px;
+    width: 152px;
+    height: 50px;
+    background: #676CDB;
+    color: white;
+    font-weight: 600;
+}
+.banner_text{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+.text-gray{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 180%;
+    color: rgba(255, 255, 255, 0.5);
+}
+.banner{
+    background-image: url("../img/Rectangle\ 3.png");
+    background-position:right;
+    background-repeat: no-repeat;
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+.mobile_image{
+    display: none;
+}
+@media only screen and (max-width: 992px){
+    .banner{
+        background-image: none;
+    }
+    .mobile_image{
+        display: block;
+    }
+    .banner_text{
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 120%;
+        color: #FFFFFF;
+    }
+}
+.download_cv{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
