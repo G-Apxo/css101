@@ -282,46 +282,131 @@
 // var resutl = 4 * 3 * 2 * 1 * getFactorial(0) //24 
 
 
-function display(){
-    console.log("დილა მშვიდობისა");
-    display = function(){
-        console.log("დღე მშვიდობისა");
-    }
-}
+// function display(){
+//     console.log("დილა მშვიდობისა");
+//     display = function(){
+//         console.log("დღე მშვიდობისა");
+//     }
+// }
 
-var displayMessage = display;
-display() // დილა მშვიდობისა
-display() // დღე მშვიდობისა"
-displayMessage() // 
-displayMessage() //
+// var displayMessage = display;
+// display() // დილა მშვიდობისა
+// display() // დღე მშვიდობისა"
+// displayMessage() // 
+// displayMessage() //
 
-// Hoisting
+// // Hoisting
 
-console.log(foo) // undefined
+// console.log(foo) // undefined
 
-var foo = "giorrgi"
-
-
-var c = a * b ;
-
-var a = 5;
-
-var b = 3;
-
-console.log(c) // NaN
+// var foo = "giorrgi"
 
 
-var user = {} ;
+// var c = a * b ;
 
-user.name = "Tom"
+// var a = 5;
+
+// var b = 3;
+
+// console.log(c) // NaN
+
+
+// var user = {} ;
+
+// user.name = "Tom"
+// user.age = 25;
+
+// console.log(user)
+// var user = {
+//     name : "Tom",
+//     age : 26,
+//     display : function() {
+//         console.log(this.name);
+//     }
+// }
+// user.display();
+
+
+
+// var user = new Object();
+//თუ ბაზიდან მოცემული ინფორმაცია არის პირდაპირ ობიექტი
+var user = {}
+user.name = "Tom";
 user.age = 25;
 
-console.log(user)
+    user.display = function() {
+        console.log(user.name);
+        console.log(user.age)
+    }
+
+user.display();
+// თუ ბაზიდან მოცემული ინფორმაცია არის მასივი
+var user = {}
+user["name"] = "Tom";
+user["age"] = 25;
+
+    user["display"] = function() {
+        console.log(user.name);
+        console.log(user.age)
+    }
+    user["display"]();
+
+
 var user = {
     name : "Tom",
-    age : 26,
+    age : 25,
     display : function() {
         console.log(this.name);
+        console.log(this.age)
     }
 }
 user.display();
+
+var user = {} 
+user.name = "Tom";
+user.age = 25;
+
+user.display = function() {
+    console.log(this.name);
+    console.log(this.age)
+}
+console.log(user.name) // Tom
+delete user.name; // წაშლა
+console.log(user.name) // undefined
+
+
+// var country = {
+//     name: "Georgia",
+//     language : "Georgian",
+//     capital : {
+//         name : "Tbilisi",
+//         population : 1500000,
+//         year : 1784
+//     }
+// };
+
+// console.log(country.capital.name) // Tbilisi /წერტილის ნოტაცია
+// console.log(country["capital"]["population"]) // მივართავთ სინტაქსიტ
+// console.log(country.capital["population"]) // შერეული სახით
+
+
+var country = {
+    name:"შვეიცარია",
+    languages : ["გერმანული", "ფრანგული", "იტალიური"],
+    capital :{
+        name : "ბერნ",
+        population :1500000 
+    },
+    cities : [
+        {name: "ციურიხი",  population :45128132 },
+        {name: "ჟენევა",  population :31612376123 },
+        {name: "ბაზელი",  population :56471261 }
+    ]
+}
+
+// country.langues ყველა ელემეტნი
+document.write("<h3>შვეიცარიის ოფიცალური ენებეია</h3>")
+for (var i = 2; i <= country.languages.length; i--) {
+    document.write(country.languages[i] + "</br>")
+}
+
