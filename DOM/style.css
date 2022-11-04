@@ -1,0 +1,65 @@
+.dark-mode{
+    background-color: black;
+}
+.light-mode{
+    background-color: yellow;
+}
+.row{
+    display: flex;
+    height: 100vh;
+}
+.night_div{
+    background-color:gray;
+    width: 50%;
+    height: 50vh;
+}
+.day_div{
+    background-color: red;
+    width: 50%;
+    height: 50vh;
+}
+
+#container{
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+    position: relative;
+}
+#animate{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+}
+#animate2{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    top: 100px;
+    left:100px;
+}
+#animate3{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    top: 150px;
+    left:150px;
+}
+#animate4{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    top: 200px;
+    left:200px;
+}
+#animate5{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    top: 250px;
+    left:250px;
+}
