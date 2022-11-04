@@ -330,49 +330,49 @@
 
 // var user = new Object();
 //თუ ბაზიდან მოცემული ინფორმაცია არის პირდაპირ ობიექტი
-var user = {}
-user.name = "Tom";
-user.age = 25;
+// var user = {}
+// user.name = "Tom";
+// user.age = 25;
 
-    user.display = function() {
-        console.log(user.name);
-        console.log(user.age)
-    }
+//     user.display = function() {
+//         console.log(user.name);
+//         console.log(user.age)
+//     }
 
-user.display();
+// user.display();
 // თუ ბაზიდან მოცემული ინფორმაცია არის მასივი
-var user = {}
-user["name"] = "Tom";
-user["age"] = 25;
+// var user = {}
+// user["name"] = "Tom";
+// user["age"] = 25;
 
-    user["display"] = function() {
-        console.log(user.name);
-        console.log(user.age)
-    }
-    user["display"]();
+//     user["display"] = function() {
+//         console.log(user.name);
+//         console.log(user.age)
+//     }
+//     user["display"]();
 
 
-var user = {
-    name : "Tom",
-    age : 25,
-    display : function() {
-        console.log(this.name);
-        console.log(this.age)
-    }
-}
-user.display();
+// var user = {
+//     name : "Tom",
+//     age : 25,
+//     display : function() {
+//         console.log(this.name);
+//         console.log(this.age)
+//     }
+// }
+// user.display();
 
-var user = {} 
-user.name = "Tom";
-user.age = 25;
+// var user = {} 
+// user.name = "Tom";
+// user.age = 25;
 
-user.display = function() {
-    console.log(this.name);
-    console.log(this.age)
-}
-console.log(user.name) // Tom
-delete user.name; // წაშლა
-console.log(user.name) // undefined
+// user.display = function() {
+//     console.log(this.name);
+//     console.log(this.age)
+// }
+// console.log(user.name) // Tom
+// delete user.name; // წაშლა
+// console.log(user.name) // undefined
 
 
 // var country = {
@@ -390,23 +390,233 @@ console.log(user.name) // undefined
 // console.log(country.capital["population"]) // შერეული სახით
 
 
-var country = {
-    name:"შვეიცარია",
-    languages : ["გერმანული", "ფრანგული", "იტალიური"],
-    capital :{
-        name : "ბერნ",
-        population :1500000 
-    },
-    cities : [
-        {name: "ციურიხი",  population :45128132 },
-        {name: "ჟენევა",  population :31612376123 },
-        {name: "ბაზელი",  population :56471261 }
-    ]
+// var country = {
+//     name:"შვეიცარია",
+//     languages : ["გერმანული", "ფრანგული", "იტალიური"],
+//     capital :{
+//         name : "ბერნ",
+//         population :1500000 
+//     },
+//     cities : [
+//         {name: "ციურიხი",  population :45128132 },
+//         {name: "ჟენევა",  population :31612376123 },
+//         {name: "ბაზელი",  population :56471261 }
+//     ]
+// }
+
+// // country.langues ყველა ელემეტნი
+// document.write("<h3>შვეიცარიის ოფიცალური ენებეია</h3>")
+// for (var i = 2; i <= country.languages.length; i--) {
+//     document.write(country.languages[i] + "</br>")
+// }
+
+// var user = {}
+// user.name = "Tom";
+// user.age = 25;
+
+// user.display = function() {
+//     console.log(this.name);
+//     console.log(this.age)
+// }
+// var hasNameProps = "name" in user;
+// document.write(hasNameProps)
+
+// function createUser(pName, pAge) {
+//     return{
+//         name:pName,
+//         age: pAge,
+//         displayInfo : function(){
+//             document.write("saxeli" + this.name + "asaki" +this.age)
+//         }
+//     };
+// };
+
+// var tom = createUser("Tom" , 26);
+// tom.displayInfo()
+
+//Constuctors ობიექტის კონსტრუქტორები
+
+// var tom = new Object();
+
+// function User (pName, pAge) {
+//     this.name = pName;
+//     this.age = pAge;
+//     this.displayInfo = function(){
+//         document.write("saxeli" + this.name + "asaki" +this.age)
+//     }
+// }
+// var tom = new User("Tom" , 26)
+
+// document.write(tom.name)
+
+// Car type constructor
+// function Car(mName, mYear) {
+//     this.name = mName;
+//     this.year = mYear;
+//     this.getCarinfo = function() {
+//         document.write("model" + this.name + "gamoshvebis weli" + this.year)
+//     }
+// }
+// Car : [
+//     {name: "lada",  year :1800 },
+// ]
+// User type
+// function User (pName, pAge){
+//       this.name = pName;
+//       this.age = pAge;
+//       this.driveCar = function(car) {
+//         document.write(this.name + "atarebs" + car.name + car.year)
+//       };
+//       this.displayInfo = function(){
+//         document.write("saxeli" + this.name + "asaki" + this.age)
+//       }
+// }
+// // User : [
+// //     {name: "Tomi",  age :26 },
+// // ]
+
+// var tom = new User("Tomi",26);
+// tom.displayInfo();
+
+
+// var lada = new Car ("lada", 1800);
+// tom.driveCar(lada)
+
+
+// prototye თვისება
+// function User (pName, pAge){
+//     this.name = pName; //ესენი რომლებიც იცვლება
+//     this.age = pAge; //არა გლობალური
+//     this.displayInfo = function(){
+//       document.write("saxeli" + this.name + "asaki" + this.age)
+//     }
+// }
+// //Hello არის მეთოდი
+// User.prototype.hello = function(){
+//     document.write(this.name + "says hello world") //გლობალური
+// }
+// //maxAge არის თვისება
+// User.prototype.maxAge = 110; //გლობალური
+
+// var tom = new User("Tom", 26);
+// tom.hello()
+// document.write(tom.maxAge)
+// var giorgi = new User ("Giorgi", 24)
+// giorgi.hello()
+// document.write(giorgi.maxAge)
+
+
+// ინკაფსულაცია
+
+// function User (pName, pAge){
+//     this.name = pName;
+//     this.age = pAge; 
+//     this.displayInfo = function(){
+//       document.write("saxeli" + this.name + "asaki" + this.age)
+//     }
+// }
+// var tom = new User("Tom" ,25)
+// tom.name = 34 ;
+// document.write(tom.name)
+
+// function User (name, age) {
+//     this.name = name;
+//     var _age = age; //getter
+//     this.displayInfo = function () {
+//         document.write("saxeli" + this.name + "asaki" + _age)
+//     };
+//     this.getAge = function () {
+//         return _age;
+//       }
+//             //setter
+//       this.setAge = function (age) {
+//         if (typeof age === "number" && age > 0 && age <110) {
+//             return _age = age;
+//         }
+//         else{
+//             alert("invalid parameters")
+//         }
+//       }
+// }
+
+// var tom = new User("Tom", 26);
+// document.write(tom._age) // undefined
+
+// document.write(tom.getAge()) // 26
+
+// tom.setAge(32);
+
+// document.write(tom.getAge());// 32
+
+// tom.setAge("53") // invalid parameters  53 
+
+
+//მემკვიდრეობა
+
+// მომხმარებლის კონსრუქტორი
+function User (name,age) {
+    this.name = name;
+    this.age = age;
+    this.go = function () {
+        document.write(this.name + "goes")
+      };
+    this.displayInfo = function () {
+        document.write("saxeli" + this.name + "asaki" + this.age);
+    }
 }
 
-// country.langues ყველა ელემეტნი
-document.write("<h3>შვეიცარიის ოფიცალური ენებეია</h3>")
-for (var i = 2; i <= country.languages.length; i--) {
-    document.write(country.languages[i] + "</br>")
-}
+User.prototype.maxage = 110;
 
+//მომუშავის კონსტრუქტორი
+
+function Employee(name,age,company) {
+    User.call(this,name,age);
+    this.company = company;
+    this.displayInfo = function() {
+        document.write("saxeli" + this.name + "asaki" + this.age + "company" + this.company);
+    }
+  }
+
+  Employee.prototype = Object.create(User.prototype);
+
+  var tom = new User("Tom" , 26)
+  var bill = new Employee ("bill", 25 , "Google");
+
+//   tom.go()
+//   bill.go()
+  tom.displayInfo()
+  bill.displayInfo()
+
+
+//   agruments : პარამეტრების მასივი
+//   length : განსაზაღვრავს ფუნქციას რასაც ელოდება ფუნქცია
+//   caller : განსაზღვრავს ფუნცციას რომლემაც წამოიწყო ფუნქციის შესრულება
+//   name :ფუნქციის სახელი
+//   prototype :ფუნქციის პროტოტიპი
+
+
+// function add (x,y) {
+//     return  x + y;
+//   }
+//   var result = add.call(this,3,8)
+//   document.write(result)
+
+  function add (x,y) {
+    return  x + y;
+  }
+  var result = add.apply(null, [3,8]);
+  document.write(result)
+
+  this.alert("Global alert")
+
+
+  "use strict";
+  function foo() {
+    var bar = "bar2"
+    console.log(this.bar)
+    }
+
+    var bar = "bar1"
+    foo() //
+    var users = new Array()
+    var people  = [ "test", ]
