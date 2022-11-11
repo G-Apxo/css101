@@ -1,0 +1,43 @@
+:root {
+    --primary-color : rgb(234, 103, 103);
+    --secondary-color:rgb(53, 25, 25);
+}
+
+body{
+    background-color: var(--primary-color);
+    margin: 0;
+}
+header{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
+.search{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 25px;
+    padding: 10px;
+    color: #fff;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie{
+    width: 300px;
+    margin: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+}
+.movie img{
+    width: 100%;
+}
+.movie-info{
+    color: white;
+    padding: 15px;
+    font-weight: 600;
+}
