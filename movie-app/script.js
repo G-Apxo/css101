@@ -37,6 +37,13 @@ function showMovies (movie) {
         main.appendChild(movieEl)
     });
   }
+  async function getspecificMovies() {
+    const res = await fetch (`https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=%22${title}`)
+     const data = await res.json()
+    console.log(data)
+    console.log(data.results)
+    showMovies(data.results)
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault()
